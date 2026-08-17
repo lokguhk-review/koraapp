@@ -1,0 +1,134 @@
+/* koraapp — 午夜藍底，檸檬黃強調 */
+:root{
+  --ink:#0a0f1c;
+  --ink-2:#111a2e;
+  --ink-3:#18233c;
+  --line:#22304d;
+  --acc:#ffd60a;
+  --acc-2:#ffe873;
+  --text:#eef2f8;
+  --muted:#96a4bd;
+  --muted-2:#6b7a95;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  background:var(--ink);color:var(--text);
+  font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;
+  line-height:1.78;-webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.hold{width:100%;max-width:1180px;margin:0 auto;padding:0 26px}
+
+/* ── 頂部：細導覽條 ── */
+.bar{border-bottom:1px solid var(--line);background:var(--ink)}
+.bar .hold{display:flex;align-items:center;gap:30px;height:60px}
+.logo{font-weight:800;font-size:19px;letter-spacing:.03em}
+.logo i{font-style:normal;color:var(--acc)}
+.menu{display:flex;gap:24px;font-size:14.5px;color:var(--muted);font-weight:600}
+.menu a:hover{color:var(--text)}
+.bar .push{flex:1}
+.lnk{font-size:14.5px;color:var(--muted);font-weight:700}
+.pill{
+  display:inline-block;font-weight:800;font-size:14.5px;
+  padding:9px 18px;border-radius:999px;background:var(--acc);color:#1b1500;
+}
+.pill:hover{background:var(--acc-2)}
+.pill-line{background:transparent;color:var(--text);border:1px solid var(--line)}
+
+/* ── 三欄首屏：左圖 / 中欄 / 右圖 ── */
+.tri{display:grid;grid-template-columns:1fr 1.06fr 1fr;min-height:552px;border-bottom:1px solid var(--line)}
+.tri-img{position:relative;background:#05080f center/cover no-repeat}
+.tri-img::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,15,28,.15),rgba(10,15,28,.72))}
+.tri-mid{
+  background:var(--ink-2);border-left:1px solid var(--line);border-right:1px solid var(--line);
+  padding:56px 44px;display:flex;flex-direction:column;justify-content:center;text-align:center;
+}
+.tri-mid h1{font-size:31px;font-weight:800;line-height:1.42;margin-bottom:16px}
+.tri-mid .sub{color:var(--muted);font-size:15.5px;margin-bottom:30px}
+.stack{display:flex;flex-direction:column;gap:11px;max-width:330px;margin:0 auto;width:100%}
+.stack a{
+  display:block;text-align:center;font-weight:800;font-size:15px;
+  padding:13px 18px;border-radius:8px;border:1px solid var(--line);
+  background:var(--ink-3);
+}
+.stack a.main{background:var(--acc);color:#1b1500;border-color:var(--acc)}
+.stack a:hover{border-color:var(--acc)}
+.fine{color:var(--muted-2);font-size:12.5px;margin-top:20px;line-height:1.8}
+
+/* ── 區段 ── */
+.band{padding:66px 0;border-bottom:1px solid var(--line)}
+.band-t{font-size:26px;font-weight:800;margin-bottom:10px;letter-spacing:.01em}
+.band-s{color:var(--muted);font-size:15.5px;margin-bottom:34px;max-width:44em}
+
+/* ── 圖片並排（左右交替） ── */
+.duo{display:grid;grid-template-columns:1.15fr 1fr;gap:40px;align-items:center}
+.duo.flip{grid-template-columns:1fr 1.15fr}
+.duo img{width:100%;height:326px;object-fit:cover;border-radius:14px;border:1px solid var(--line)}
+.duo h3{font-size:21px;font-weight:800;margin-bottom:13px}
+.duo p{color:var(--muted);font-size:15.5px;margin-bottom:13px}
+
+/* ── 對照表 ── */
+.vs{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.vs-col{background:var(--ink-2);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.vs-col header{padding:16px 22px;background:var(--ink-3);border-bottom:1px solid var(--line)}
+.vs-col header b{font-size:16px;font-weight:800}
+.vs-col header span{display:block;color:var(--muted-2);font-size:12.5px;letter-spacing:.08em;margin-top:2px}
+.vs-col ul{list-style:none;padding:8px 0}
+.vs-col li{padding:12px 22px;color:var(--muted);font-size:14.5px;border-top:1px solid var(--line)}
+.vs-col li:first-child{border-top:0}
+.vs-col li b{color:var(--text);font-weight:700}
+
+/* ── 條列步驟（橫向數字） ── */
+.flow{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.flow-i{background:var(--ink-2);border:1px solid var(--line);border-radius:14px;padding:24px 22px}
+.flow-i em{
+  font-style:normal;display:inline-grid;place-items:center;
+  width:30px;height:30px;border-radius:8px;
+  background:var(--acc);color:#1b1500;font-weight:800;font-size:14px;margin-bottom:14px;
+}
+.flow-i h4{font-size:16.5px;font-weight:800;margin-bottom:8px}
+.flow-i p{color:var(--muted);font-size:14.5px}
+
+/* ── 問答摺頁樣式（純靜態） ── */
+.qa{border-top:1px solid var(--line)}
+.qa-i{padding:20px 0;border-bottom:1px solid var(--line)}
+.qa-i h4{font-size:16.5px;font-weight:800;margin-bottom:7px}
+.qa-i h4::before{content:"Q";color:var(--acc);font-weight:800;margin-right:9px}
+.qa-i p{color:var(--muted);font-size:15px}
+
+/* ── 內頁：窄版頁首 ── */
+.top-slim{border-bottom:1px solid var(--line);background:var(--ink-2);padding:44px 0 38px}
+.top-slim .path{color:var(--muted-2);font-size:13px;margin-bottom:11px}
+.top-slim .path a{color:var(--muted)}
+.top-slim h1{font-size:29px;font-weight:800;line-height:1.42;max-width:26em}
+.top-slim p{color:var(--muted);font-size:15.5px;margin-top:11px;max-width:44em}
+
+/* ── 內文 ── */
+.copy{max-width:52em;padding:52px 0}
+.copy h2{font-size:22px;font-weight:800;margin:36px 0 13px}
+.copy h2:first-child{margin-top:0}
+.copy h3{font-size:17px;font-weight:800;margin:24px 0 9px;color:var(--acc-2)}
+.copy p{color:var(--muted);font-size:15.5px;margin-bottom:14px}
+.copy strong{color:var(--text)}
+.copy ul,.copy ol{color:var(--muted);font-size:15.5px;margin:0 0 16px 21px}
+.copy li{margin-bottom:8px}
+.copy img{width:100%;height:270px;object-fit:cover;border-radius:14px;border:1px solid var(--line);margin:26px 0}
+.warn{background:var(--ink-2);border:1px solid var(--line);border-left:3px solid var(--acc);padding:17px 20px;border-radius:0 10px 10px 0;margin:22px 0}
+.warn p{color:var(--text);margin:0;font-size:15px}
+
+/* ── 頁尾 ── */
+.end{background:var(--ink-2);padding:44px 0 32px}
+.end-grid{display:flex;gap:44px;flex-wrap:wrap;margin-bottom:26px}
+.end-grid h5{font-size:12.5px;letter-spacing:.1em;color:var(--muted-2);font-weight:800;margin-bottom:12px}
+.end-grid a{display:block;color:var(--muted);font-size:14.5px;margin-bottom:8px}
+.end-grid a:hover{color:var(--text)}
+.end-note{border-top:1px solid var(--line);padding-top:20px;color:var(--muted-2);font-size:12.5px;line-height:1.9}
+
+@media(max-width:980px){
+  .tri{grid-template-columns:1fr}
+  .tri-img{min-height:200px}
+  .tri-mid{border-left:0;border-right:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .duo,.duo.flip,.vs,.flow{grid-template-columns:1fr}
+  .menu{display:none}
+}
