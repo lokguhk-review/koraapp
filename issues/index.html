@@ -1,0 +1,68 @@
+<meta charset="UTF-8">
+<title>KORA 球域 App 疑難排解｜安裝失敗與收不到通知</title>
+<meta name="description" content="KORA 球域 App 的問題排查順序：Android 安裝失敗、收不到賽事提醒、直播卡頓與比分不更新，四種狀況各自的處理步驟。">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="canonical" href="https://koraapp.onrender.com/issues/">
+<link rel="stylesheet" href="/handset.css">
+
+<header class="bar">
+  <div class="hold">
+    <a class="logo" href="/">KORA <i>球域</i> App</a>
+    <nav class="menu">
+      <a href="/ios/">iOS 安裝</a>
+      <a href="/android/">Android APK</a>
+      <a href="/alerts/">賽事提醒</a>
+      <a href="/devices/">裝置同步</a>
+      <a href="/issues/" style="color:var(--text)">疑難排解</a>
+    </nav>
+    <div class="push"></div>
+    <a class="lnk" href="/issues/">安裝遇到問題？</a>
+    <a class="pill" href="https://kora.show/">取得 App</a>
+  </div>
+</header>
+
+<section class="top-slim">
+  <div class="hold">
+    <div class="path"><a href="/">首頁</a> ／ 疑難排解</div>
+    <h1>KORA 球域 App 的四種常見狀況怎麼排查</h1>
+    <p>先分清是 App、網路、還是權限的問題，再動手。</p>
+  </div>
+</section>
+
+<main>
+  <div class="hold">
+    <div class="copy">
+      <h2>一、Android 安裝失敗或裝完打不開</h2>
+      <p>順序這樣試：確認檔案是從官方網站下載的完整檔案 → 重新下載一次 → 確認系統的「允許來自此來源的應用」已開啟。三步都做過還不行，通常是系統版本太舊。</p>
+      <img src="https://images.pexels.com/photos/6611918/pexels-photo-6611918.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="檢查 KORA 球域 App 在手機上的運作狀況">
+      <h2>二、收不到賽事提醒</h2>
+      <p>這件事有三層，任何一層關著就不會送出：</p>
+      <ol>
+        <li>系統的通知權限是否開啟（iOS 首次安裝拒絕過的話要回設定開）</li>
+        <li>系統的「即時通知」是否開啟——只開允許通知但關掉即時，提醒會被延後幾分鐘</li>
+        <li>App 內是否真的加入了該場次，不是只訂閱了聯賽</li>
+      </ol>
+      <p>設定方式見 <a href="/alerts/" style="color:var(--acc)">賽事提醒</a>。</p>
+      <h2>三、直播卡頓</h2>
+      <p>先看畫面右上角的狀態標示。<strong>KORA 球域</strong>在頻寬不足時會顯示目前的降階階段，如果標示正常但畫面仍卡，那多半不是頻寬問題，而是單一線路異常——切換 Wi-Fi 與行動網路就能判斷。手動把畫質鎖在 720p 也常常有效，見 <a href="/offline/" style="color:var(--acc)">流量與畫質</a>。</p>
+      <h2>四、比分不更新</h2>
+      <p>五大聯賽的事件資料通常十秒內到位，次級聯賽可能落後半分鐘以上，這是資料源的差異不是故障。如果連五大聯賽都明顯延遲，先確認裝置時間是否正確——時間偏差會讓事件排序看起來像沒更新。</p>
+      <div class="warn"><p>以上四種都排除後仍有問題，建議直接看 <a href="https://kora.show/" style="color:var(--acc)">官方網站</a> 的公告，那裡會標示服務中斷或維護時段。</p></div>
+    </div>
+  </div>
+</main>
+
+<footer class="end">
+  <div class="hold">
+    <div class="end-grid">
+      <div><h5>安裝</h5><a href="/ios/">iOS 安裝</a><a href="/android/">Android APK</a></div>
+      <div><h5>設定</h5><a href="/alerts/">賽事提醒</a><a href="/offline/">流量與畫質</a><a href="/devices/">裝置同步</a></div>
+      <div><h5>其他</h5><a href="/issues/">疑難排解</a><a href="/policy/">條款與私隱</a></div>
+      <div><h5>官方</h5><a href="https://kora.show/">KORA 球域官方網站</a></div>
+    </div>
+    <div class="end-note">
+      本站為 KORA 球域 App 的安裝與設定資訊整理頁，不提供安裝檔本身，下載請經由官方網站。App 功能與版本資訊以官方公告為準。<br>
+      賽事資料僅供觀賽參考，不構成任何投注建議。
+    </div>
+  </div>
+</footer>
